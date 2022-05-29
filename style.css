@@ -7,7 +7,7 @@
     --secondary-call-to-action-text-color: #fff;
     --primary-call-to-action-background-color: #fff;
     --secondary-call-to-action-background-color: #580084;
-    --primary-site-background-color: #580084;
+    --primary-site-background-color: #2a0034;
     --secondary-site-background-color: #fff;
 }
 
@@ -33,6 +33,25 @@ body{
     background: #fff;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+::-webkit-scrollbar{
+    width: 6px;
+    background: transparent;
+}
+::-webkit-scrollbar-track{
+    width: 6px;
+}
+::-webkit-scrollbar-thumb{
+    width: 6px;
+    border-radius: 5px;
+    background-color: #0e001450;
+}
+::-webkit-scrollbar-thumb:hover{
+    width: 6px;
+    border-radius: 5px;
+    background-color: #0e0014;
 }
 
 
@@ -46,7 +65,7 @@ body{
 /* THE TOP NAVIGATION BAR  */
 .static-top-nav-bar{
     position: fixed;
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -82,7 +101,7 @@ body{
 .static-top-nav-bar .links-container a{
     color: var(--secondary-text-color);
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 40px;
 }
 .static-top-nav-bar .links-container a:hover{
     color: var(--primary-hover-text-color);
@@ -114,10 +133,11 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 6px;
-    border: 1.5px solid var(--primary-site-background-color);
+    border: 1.5px solid var(--primary-call-to-action-background-color);
     bottom: 5%;
-    right: 2%;
+    right: 10%;
     cursor: pointer;
+    transform:scale(.6);
 }
 .menu-button-holder .menu-bar{
     display: flex;
@@ -128,9 +148,187 @@ body{
 .menu-button-holder .menu-bar .bar{
     width: 30px;
     height: 4px;
-    background-color: var(--primary-site-background-color);
+    background-color: var(--primary-call-to-action-background-color);
     display: block;
     border-radius: 5px;
     margin: 2px;
 
+}
+
+
+
+
+
+
+
+
+
+/* THE STYLES FOR LANDING PAGE LOGO CONTAINER */
+.intro-scroller{
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.intro-scroller .logo-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 60%;
+    min-width:50%;
+}
+.intro-scroller .logo-holder .logo-image{
+    background-color: var(--primary-site-background-color);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.intro-scroller .logo-holder .logo-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.intro-scroller .logo-holder .logo-words{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.intro-scroller .logo-holder .logo-words .main-text{
+    font-size: 2.2em;
+    font-weight: bold;
+    color: var(--secondary-text-color);
+}
+.intro-scroller .logo-holder .logo-words .explaining-text{
+    font-size: .7em;
+    font-weight: light;
+    color: var(--secondary-text-color);
+}
+.intro-scroller .scroll-indicator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.intro-scroller .scroll-indicator .word-to-indicate{
+    animation-name: fade-in-scroll;
+    animation-duration: 1.4s;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier();
+    animation-iteration-count: infinite;
+}
+.intro-scroller .scroll-indicator .word-to-indicate .scroll-indicator-text{
+    color: var(--secondary-text-color);
+    font-weight: 400;
+}
+.intro-scroller .scroll-indicator .scroll-images{
+    margin-top: 20px;
+}
+.intro-scroller .scroll-indicator .scroll-images .image-mouse{
+    animation-name: fade-in-arrow-scroll;
+    animation-duration: 1.4s;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier();
+    animation-iteration-count: infinite;
+}
+.intro-scroller .scroll-indicator .scroll-images .image-mouse i{
+    color: var(--primary-call-to-action-text-color);
+}
+.intro-scroller .scroll-indicator .scroll-images .image-down-arrow{
+    animation-name: fade-in-arrow-scroll;
+    animation-duration: 1.4s;
+    animation-delay: .8s;
+    animation-timing-function: cubic-bezier();
+    animation-iteration-count: infinite;
+}
+.intro-scroller .scroll-indicator .scroll-images .image-down-arrow i{
+    color: var(--primary-call-to-action-text-color);
+}
+@keyframes fade-in-scroll {
+    0%{
+        opacity: 0;
+        transform: translateY(-45px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fade-in-arrow-scroll {
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* STYLING THE HOME PAGE FIRST ONE */
+.home-page{
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+    background-color: var(--primary-site-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-page .title-hero{
+    width: 60%;
+    margin: 30px;
+}
+.home-page .title-hero .the-hero-text-on-home-page{
+    font-size: 5em;
+    font-weight: 900;
+    color: var(--primary-text-color);
+}
+.home-page .button{
+    width: 60%;
+    padding: 30px 0;
+}
+.home-page .button .button-to-videos-on-home-page{
+    width: 80%;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    background-color: var(--primary-call-to-action-background-color);
+    padding: 10px;
+}
+.home-page .button .button-to-videos-on-home-page a{
+    font-size: 4em;
+    font-weight: 800;
+}
+.home-page .button .button-to-videos-on-home-page i{
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 4em;
+    color: var(--primary-call-to-action-text-color);
 }
