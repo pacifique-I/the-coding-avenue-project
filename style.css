@@ -332,3 +332,97 @@ body{
     font-size: 4em;
     color: var(--primary-call-to-action-text-color);
 }
+
+
+
+
+
+
+
+
+
+/* STYLIN THE WHY US PAGE  */
+.why-us-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-site-background-color);
+}
+.why-us-page .title-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    line-height: 50px;
+    margin: 20px;
+}
+.why-us-page .title-hero .main-title{
+    font-size: 4em;
+    color: var(--primary-call-to-action-text-color);
+    font-weight: 900;
+}
+.why-us-page .title-hero .sub-title{
+    font-size: 2em;
+    font-weight: 400;
+    color: var(--primary-call-to-action-text-color);
+}
+.why-us-page .the-slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.why-us-page .the-slider .comments-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.why-us-page .the-slider .comments-wrapper .comment-wrapper{
+    outline: 3px solid var(--primary-site-background-color);
+    border-radius: 50px;
+    margin: 50px;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+.why-us-page .the-slider .comments-wrapper .comment-wrapper::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
+    background: linear-gradient(to top, white ,transparent);
+    z-index: 3;
+}
+.why-us-page .the-slider .comments-wrapper .comment-wrapper .comment{
+    position: absolute;
+    width: 70%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--secondary-text-color);
+    font-size: .9em;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+    z-index: 4;
+}
+.why-us-page .the-slider .comments-wrapper .comment-wrapper .commenter-image{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
