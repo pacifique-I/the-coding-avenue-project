@@ -73,6 +73,7 @@ body{
     left: 50%;
     top: 5%;
     transform: translateX(-50%);
+    z-index: 1000;
 }
 .static-top-nav-bar .logo-container{
     width: 50px;
@@ -133,11 +134,12 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 6px;
-    border: 1.5px solid var(--primary-call-to-action-background-color);
+    border: 1.5px solid var(--primary-call-to-action-text-color);
     bottom: 5%;
     right: 10%;
     cursor: pointer;
     transform:scale(.6);
+    z-index: 100;
 }
 .menu-button-holder .menu-bar{
     display: flex;
@@ -149,6 +151,7 @@ body{
     width: 30px;
     height: 4px;
     background-color: var(--primary-call-to-action-background-color);
+    border: 1px solid var(--primary-call-to-action-text-color);
     display: block;
     border-radius: 5px;
     margin: 2px;
@@ -350,6 +353,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: var(--secondary-site-background-color);
+    position: relative;
 }
 .why-us-page .title-hero{
     display: flex;
@@ -382,7 +386,8 @@ body{
     align-items: center;
 }
 .why-us-page .the-slider .comments-wrapper .comment-wrapper{
-    outline: 3px solid var(--primary-site-background-color);
+    outline: 40px solid var(--primary-site-background-color);
+    outline-offset: -45px;
     border-radius: 50px;
     margin: 50px;
     height: 300px;
@@ -391,6 +396,11 @@ body{
     cursor: pointer;
     overflow: hidden;
     z-index: 1;
+    transition: all ease-in-out .3s;
+}
+.why-us-page .the-slider .comments-wrapper .comment-wrapper:hover{
+    outline-offset: 0px;
+    outline-color: transparent;
 }
 .why-us-page .the-slider .comments-wrapper .comment-wrapper::after{
     content: "";
@@ -403,6 +413,11 @@ body{
     position: absolute;
     background: linear-gradient(to top, white ,transparent);
     z-index: 3;
+    opacity: 0;
+    transition: all ease-in-out .2s;
+}
+.why-us-page .the-slider .comments-wrapper .comment-wrapper:hover::after{
+    opacity: 1;
 }
 .why-us-page .the-slider .comments-wrapper .comment-wrapper .comment{
     position: absolute;
@@ -416,6 +431,11 @@ body{
     text-align: center;
     cursor: pointer;
     z-index: 4;
+    opacity: 0;
+    transition: all ease-in-out .3s;
+}
+.why-us-page .the-slider .comments-wrapper .comment-wrapper:hover .comment{
+    opacity: .8;
 }
 .why-us-page .the-slider .comments-wrapper .comment-wrapper .commenter-image{
     object-fit: cover;
@@ -425,4 +445,81 @@ body{
     width: 100%;
     height: 100%;
     z-index: 2;
+}
+.why-us-page .the-slider .comment-slider{
+    width: 40%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.why-us-page .the-slider .comment-slider .slide-to-left, .slide-to-right{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--secondary-call-to-action-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.why-us-page .the-slider .comment-slider .slide-to-left, .slide-to-right i{
+    color: var(--primary-text-color);
+}
+
+
+
+
+
+
+
+
+
+/* BENEFITS PAGE STYLINGS  */
+.benefits-page{
+    width: 100%;
+    height: 300%;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--primary-site-background-color);
+}
+.benefits-page .benefit{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.benefits-page .benefit .title-hero{
+    width: 50%;
+}
+.benefits-page .benefit .title-hero .benefit-title{
+    font-size: 5em;
+    font-weight: 900;
+    color: var(--primary-text-color);
+}
+.benefits-page .benefit .title-hero .benefit-title .benefit-title-indication{
+    color: rgb(153, 255, 153);
+    font-weight: 900;
+}
+.benefits-page .benefit .video-descrpton{
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    overflow: hidden;
+}
+.benefits-page .benefit .video-descrpton video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
