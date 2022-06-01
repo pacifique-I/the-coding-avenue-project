@@ -138,6 +138,27 @@ body{
 
 
 
+/* STYLING THE SCOLL INDICATOR  */
+.scroll-indication{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(100, 255, 100);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    transition: all ease-in 10ms;
+}
+
+
+
+
+
+
+
+
+
 /* THE MENU BAR STYLES */
 .menu-button-holder{
     position: fixed;
@@ -197,6 +218,8 @@ body{
     border: .4px solid var(--primary-call-to-action-text-color);
     opacity: 0;
     visibility: hidden;
+    transform: translateY(15px);
+    transition: all ease-in-out .4s;
 }
 .menu-dropdown .menu-drop-down-title{
     font-size: 1em;
