@@ -1,0 +1,202 @@
+/* VARIABLES DECLARATION */
+:root{
+    --primary-text-color: #fff;
+    --secondary-text-color: #707070;
+    --primary-hover-text-color: #580084;
+    --primary-call-to-action-text-color: #580084;
+    --secondary-call-to-action-text-color: #fff;
+    --primary-call-to-action-background-color: #fff;
+    --secondary-call-to-action-background-color: #580084;
+    --primary-site-background-color: #2a0034;
+    --secondary-site-background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* STYLING THE COMMENTS SECTION  */
+.customer-comments{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 20px 20px;
+    background-color: var(--primary-site-background-color);
+    overflow: hidden;
+}
+.customer-comments .comments-wrapper{
+    width: 90%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.customer-comments .comments-wrapper .comment{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background-color: var(--secondary-site-background-color);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.customer-comments .comments-wrapper .comment .image-holder{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px;
+}
+.customer-comments .comments-wrapper .comment .image-holder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.customer-comments .comments-wrapper .comment .comment-words-holder{
+    width: 70%;
+    height: 40%;
+}
+.customer-comments .comments-wrapper .comment .comment-words-holder p{
+    font-size: .7em;
+    font-weight: 300;
+    color: var(--secondary-text-color);
+}
+.customer-comments .comments-wrapper .comment .overlay-white{
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    height: 60%;
+    z-index: 10;
+    background: linear-gradient(to top, var(--secondary-site-background-color),transparent);
+}
+
+
+
+
+
+
+
+
+
+/* STYLING THE SKILLS SECTION  */
+.our-skills{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--secondary-site-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.our-skills .skills-wrapper{
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.our-skills .skills-wrapper .skill{
+    background-color: var(--primary-site-background-color);
+    border-radius: 7px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+    height: 300px;
+    cursor: pointer;
+    transition: all ease-in .3s;
+}
+.our-skills .skills-wrapper .skill .skill-title{
+    width: 80%;
+    margin: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all ease-in .3s;
+}
+.our-skills .skills-wrapper .skill .skill-title span{
+    font-size: 1.2em;
+    font-weight: 900;
+    color: var(--primary-text-color);
+}
+.our-skills .skills-wrapper .skill .skill-body{
+    margin-top: 40%;
+    transform: translateY(300%);
+    transition: all ease-in .3s;
+}
+.our-skills .skills-wrapper .skill:hover .skill-body{
+    transform: translateY(0%);
+}
+.our-skills .skills-wrapper .skill:hover .skill-title{
+    transform: translate(-50%,-250%);
+}
+.our-skills .skills-wrapper .skill .skill-body p{
+    color: var(--primary-text-color);
+    font-size: .8em;
+    font-weight: 300;
+}
+.our-skills .experiance{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: var(--primary-site-background-color);
+    cursor: pointer;
+}
+.our-skills .experiance .words-wrapper{
+    overflow: hidden;
+    width: fit-content;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    animation-name: experiance-scroller;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+}
+.our-skills .experiance .words-wrapper p{
+    color: var(--primary-text-color);
+    font-size: .6em;
+    font-weight: 300;
+}
+@keyframes experiance-scroller {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -50%;
+    }
+}
