@@ -11,9 +11,7 @@
 </head>
 <body>
     <!-- SCROLL-INDICATOR  -->
-    <div class="scroll-indication">
-
-    </div>
+    <div class="scroll-indication"></div>
     <!-- STATIC TOP NAVIGATION BAR -->
     <div class="static-top-nav-bar">
         <div class="logo-container">
@@ -25,7 +23,7 @@
             <a href="#">projects</a>
         </div>
         <div class="call-to-act-nav-button-container">
-            <a href="#">lesson</a>
+            <a href="#">Courses</a>
         </div>
     </div>
 
@@ -46,7 +44,7 @@
                 <i></i>
                 <span>Home</span>
             </a>
-            <a href="#">
+            <a href="html/about.html">
                 <i></i>
                 <span>About</span>
             </a>
@@ -63,6 +61,10 @@
 
     <!-- THE MAIN LOADING PAGE FOR WELCOME -->
     <div class="intro-scroller">
+        <div class="background-video">
+            <div class="background-color"></div>
+            <video src="videos/video-indicator-test.mp4" class="main-backgroun-video" loop muted autoplay></video>
+        </div>
         <div class="logo-holder">
             <div class="logo-image">
                 <img src="images/logos/logo.png" alt="the main logo of coding AV" srcset="">
@@ -142,6 +144,7 @@
         </div>
     </div>
 
+    <!-- BENEFITS PAGE  -->
     <div class="benefits-page">
         <div class="benefit">
             <div class="title-hero">
@@ -178,16 +181,33 @@
         </div>
 
         <div class="all-list-of-companies">
-            <div class="company-in-list">
-                <div class="company-logo">
-                    <img src="images/logos/logo.png" alt="companie's logo" class="company-logo-image">
-                    <span class="company-description">The company</span>
+            <div class="companies-wrapper">
+                <div class="company-in-list">
+                    <img src="images/logos/logo.png" alt="companie's logo" class="company-logo">
+                </div>
+                <div class="company-in-list">
+                    <img src="images/logos/logo.png" alt="companie's logo" class="company-logo">
+                </div>
+                <div class="company-in-list">
+                    <img src="images/logos/logo.png" alt="companie's logo" class="company-logo">
+                </div>
+                <div class="company-in-list">
+                    <img src="images/logos/logo.png" alt="companie's logo" class="company-logo">
+                </div>
+                <div class="company-in-list">
+                    <img src="images/logos/logo.png" alt="companie's logo" class="company-logo">
+                </div>
+                <div class="company-in-list">
+                    <img src="images/logos/logo.png" alt="companie's logo" class="company-logo">
+                </div>
+                <div class="company-in-list">
+                    <img src="images/logos/logo.png" alt="companie's logo" class="company-logo">
                 </div>
             </div>
         </div>
     </div>
 
-
+    <!-- TRUSTED-PAGE  -->
     <div class="trusted-page">
         <div class="trusted-title-hero">
             <span>they TRUSTED us!</span>
@@ -294,6 +314,7 @@
         </div>
     </div>
 
+    <!-- FOOTER-PAGE  -->
     <div class="footer">
         <div class="footer-about-us">
             <div class="logo-container">
@@ -306,9 +327,9 @@
                 </div>
             </div>
             <div class="links">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Why us</a>
+                    <a href="index.html">Home</a>
+                    <a href="html/about.html">About</a>
+                    <a href="html/why-us.html">Why us</a>
             </div>
         </div>
         <div class="footer-interact-with-us">
@@ -345,4 +366,6 @@
 <script src="scripts/scroll-indicator.js"></script>
 <script src="scripts/menu.js"></script>
 <script src="scripts/top-scroller.js"></script>
+<script src="scripts/comments-scroller.js"></script>
+<script src="scripts/trusted-horizontal-scroller.js"></script>
 </html>
