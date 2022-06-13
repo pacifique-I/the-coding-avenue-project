@@ -226,6 +226,9 @@ body{
     font-size: 1em;
     color: var(--primary-hover-text-color);
 }
+.menu-dropdown .menu-drop-down-title i{
+    margin-left: 10px;
+}
 .menu-dropdown .menu-drop-down-links{
     display: flex;
     flex-direction: column;
@@ -242,10 +245,13 @@ body{
     width: 100%;
     padding: 4px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     color: var(--secondary-text-color);
+}
+.menu-dropdown .menu-drop-down-links a i{
+    margin-left: 10px;
 }
 .menu-dropdown .menu-drop-down-links a:hover{
     color: var(--primary-hover-text-color);
@@ -392,7 +398,7 @@ body{
     animation-iteration-count: infinite;
 }
 .intro-scroller .scroll-indicator .scroll-images .image-mouse i{
-    color: var(--primary-call-to-action-text-color);
+    color: var(--primary-text-color);
 }
 .intro-scroller .scroll-indicator .scroll-images .image-down-arrow{
     animation-name: fade-in-arrow-scroll;
@@ -402,7 +408,7 @@ body{
     animation-iteration-count: infinite;
 }
 .intro-scroller .scroll-indicator .scroll-images .image-down-arrow i{
-    color: var(--primary-call-to-action-text-color);
+    color: var(--primary-text-color);
 }
 @keyframes fade-in-scroll {
     0%{
