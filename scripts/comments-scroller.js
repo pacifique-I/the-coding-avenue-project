@@ -19,7 +19,6 @@ commentSliderRight.addEventListener("click",()=>{
         scrollLeftSize -= 350
         commentHolder.style.left = scrollRightSize+"px"
         leftOffset += 350
-        console.log(leftOffset);
     }
 })
 commentSliderLeft.addEventListener("click",()=>{
@@ -29,6 +28,5 @@ commentSliderLeft.addEventListener("click",()=>{
         scrollRightSize += 350
         commentHolder.style.left = scrollLeftSize+"px"
         leftOffset -= 350
-        console.log(leftOffset);
     }
 })
