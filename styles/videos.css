@@ -1,0 +1,94 @@
+.video-intro{
+    width:100%;
+    height:100%;
+    padding:0 10%;
+    background-color: #2a0034;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.video-intro .left-side{
+    width:50%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.video-intro .left-side .header-intro{
+    font-size: 3.3em;
+    font-weight: 900;
+    color: #fff;
+    line-height: 70px;
+    margin: 20px 0;
+}
+.video-intro .left-side .intro-text{
+    font-size: .9em;
+    font-weight: 300;
+    color: #fff;
+    margin: 20px 0;
+}
+.video-intro .left-side .button{
+    width:70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+.video-intro .left-side .button .watch{
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #580084;
+}
+.video-intro .left-side .button i{
+    color:#580084;
+}
+.video-intro .right-side{
+    float:right;
+    width:50%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 40px;
+}
+.video-intro .right-side .video-advert-container{
+    border-radius: 40px;
+    height:80%;
+    background-color: #fff;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.video-intro .right-side .video-advert-container img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-intro .right-side .video-advert-container .circles{
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.video-intro .right-side .video-advert-container .circles .circle{
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #2a0034;
+    margin:5px 0;
+}
